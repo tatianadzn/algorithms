@@ -1,12 +1,12 @@
 package queues;
 
-public class ResizingArrayQueueOfStrings {
+public class ResizingArrayQueue <Item> {
     private int last, first;
     private int n;
-    private String [] q;
+    private Item [] q;
 
-    public ResizingArrayQueueOfStrings(){
-        q = new String[2];
+    public ResizingArrayQueue(){
+        q = (Item []) new Object[2];
         first = 0;
         last = 0;
         n = 0;
@@ -20,7 +20,7 @@ public class ResizingArrayQueueOfStrings {
         return n == 0;
     }
 
-    public void enqueue(String item){
+    public void enqueue(Item item){
         if (n == q.length){
             resize(q.length * 2);
         }
@@ -32,8 +32,8 @@ public class ResizingArrayQueueOfStrings {
         }
     }
 
-    public String dequeue(){
-        String item = q[first];
+    public Item dequeue(){
+        Item item = q[first];
         q[first++] = null;
         n--;
 
@@ -44,7 +44,7 @@ public class ResizingArrayQueueOfStrings {
     }
 
     private void resize(int capacity){
-        String [] copy = new String[capacity];
+        Item [] copy = (Item []) new Object[capacity];
         for (int i = 0; i < n; i++){
             copy[i] = q[(first + i) % q.length];
         }

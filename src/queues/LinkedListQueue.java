@@ -1,11 +1,11 @@
 package queues;
 
-public class LinkedListQueueOfStrings {
+public class LinkedListQueue <Item> {
     private Node first = null;
     private Node last = null;
 
     private class Node{
-        String item;
+        Item item;
         Node next;
     }
 
@@ -13,7 +13,7 @@ public class LinkedListQueueOfStrings {
         return first == null;
     }
 
-    public void enqueue(String item){
+    public void enqueue(Item item){
         Node oldlast = last;
         last = new Node();
         last.item = item;
@@ -25,8 +25,8 @@ public class LinkedListQueueOfStrings {
         }
     }
 
-    public String dequeue(){
-        String item = first.item;
+    public Item dequeue(){
+        Item item = first.item;
         first = first.next;
         if(isEmpty()){
             last = null;

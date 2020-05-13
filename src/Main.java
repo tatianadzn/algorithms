@@ -1,12 +1,11 @@
-import stacks.*;
 import queues.*;
 
 public class Main {
     //testing client
     public static void main(String[] args){
-//        LinkedStackOfStrings stack = new LinkedStackOfStrings();
-//        FixedCapacityStackOfStringsArrayImplementation stack = new FixedCapacityStackOfStringsArrayImplementation(4);
-//        ResizingArrayStackOfStrings stack = new ResizingArrayStackOfStrings();
+//        LinkedStack stack = new LinkedStack();
+//        FixedCapacityStackArrayImplementation stack = new FixedCapacityStackArrayImplementation(4);
+//        ResizingArrayStack stack = new ResizingArrayStack();
 //        System.out.println(stack.isEmpty());
 //        stack.push("to");
 //        stack.push("be");
@@ -16,8 +15,8 @@ public class Main {
 //        System.out.println(stack.pop());
 //        System.out.println(stack.isEmpty());
 
-//        LinkedListQueueOfStrings q = new LinkedListQueueOfStrings();
-        ResizingArrayQueueOfStrings q = new ResizingArrayQueueOfStrings();
+//        LinkedListQueue q = new LinkedListQueue();
+        ResizingArrayQueue<String> q = new ResizingArrayQueue<>();
         System.out.println(q.isEmpty());
         q.enqueue("to");
         q.enqueue("be");
