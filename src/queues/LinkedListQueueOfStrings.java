@@ -1,7 +1,6 @@
 package queues;
 
 public class LinkedListQueueOfStrings {
-    private String [] q;
     private Node first = null;
     private Node last = null;
 
