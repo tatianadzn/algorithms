@@ -16,7 +16,8 @@ public class Main {
 //        System.out.println(stack.pop());
 //        System.out.println(stack.isEmpty());
 
-        LinkedListQueueOfStrings q = new LinkedListQueueOfStrings();
+//        LinkedListQueueOfStrings q = new LinkedListQueueOfStrings();
+        ResizingArrayQueueOfStrings q = new ResizingArrayQueueOfStrings();
         System.out.println(q.isEmpty());
         q.enqueue("to");
         q.enqueue("be");
@@ -25,6 +26,5 @@ public class Main {
         q.enqueue("not");
         System.out.println(q.dequeue());
         System.out.println(q.isEmpty());
-
     }
 }
