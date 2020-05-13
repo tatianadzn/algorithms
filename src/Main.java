@@ -4,7 +4,8 @@ public class Main {
     //test client
     public static void main(String[] args){
 //        LinkedStackOfStrings stack = new LinkedStackOfStrings();
-        FixedCapacityStackOfStringsArrayImplementation stack = new FixedCapacityStackOfStringsArrayImplementation(4);
+//        FixedCapacityStackOfStringsArrayImplementation stack = new FixedCapacityStackOfStringsArrayImplementation(4);
+        ResizingArrayStackOfStrings stack = new ResizingArrayStackOfStrings();
         System.out.println(stack.isEmpty());
         stack.push("to");
         stack.push("be");
