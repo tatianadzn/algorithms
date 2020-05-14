@@ -16,13 +16,15 @@ public class Main {
 //        System.out.println(stack.isEmpty());
 
 //        LinkedListQueue q = new LinkedListQueue();
-        ResizingArrayQueue<String> q = new ResizingArrayQueue<>();
+//        ResizingArrayQueue<String> q = new ResizingArrayQueue<>();
+        QueueByTwoStacks<String> q = new QueueByTwoStacks<>();
         System.out.println(q.isEmpty());
         q.enqueue("to");
         q.enqueue("be");
         q.enqueue("or");
         System.out.println(q.dequeue());
         q.enqueue("not");
+        System.out.println(q.dequeue());
         System.out.println(q.dequeue());
         System.out.println(q.isEmpty());
     }
