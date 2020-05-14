@@ -1,4 +1,4 @@
-import queues.*;
+import sorts.Merge;
 
 public class Main {
     //testing client
@@ -17,15 +17,26 @@ public class Main {
 
 //        LinkedListQueue q = new LinkedListQueue();
 //        ResizingArrayQueue<String> q = new ResizingArrayQueue<>();
-        QueueByTwoStacks<String> q = new QueueByTwoStacks<>();
-        System.out.println(q.isEmpty());
-        q.enqueue("to");
-        q.enqueue("be");
-        q.enqueue("or");
-        System.out.println(q.dequeue());
-        q.enqueue("not");
-        System.out.println(q.dequeue());
-        System.out.println(q.dequeue());
-        System.out.println(q.isEmpty());
+//        QueueByTwoStacks<String> q = new QueueByTwoStacks<>();
+//        System.out.println(q.isEmpty());
+//        q.enqueue("to");
+//        q.enqueue("be");
+//        q.enqueue("or");
+//        System.out.println(q.dequeue());
+//        q.enqueue("not");
+//        System.out.println(q.dequeue());
+//        System.out.println(q.dequeue());
+//        System.out.println(q.isEmpty());
+
+        Integer[] a = new Integer[3];
+        a[0] = 1;
+        a[1] = 6;
+        a[2] = 3;
+
+        Merge.sort(a);
+
+        for (int i = 0; i < a.length; i++){
+            System.out.println(a[i]);
+        }
     }
 }
