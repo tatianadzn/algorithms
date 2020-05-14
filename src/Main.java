@@ -1,4 +1,5 @@
-import sorts.Merge;
+import sorting.Merge;
+import sorting.MergeBottomUp;
 
 public class Main {
     //testing client
@@ -28,12 +29,14 @@ public class Main {
 //        System.out.println(q.dequeue());
 //        System.out.println(q.isEmpty());
 
-        Integer[] a = new Integer[3];
+        Integer[] a = new Integer[5];
         a[0] = 1;
         a[1] = 6;
         a[2] = 3;
+        a[3] = 0;
+        a[4] = 5;
 
-        Merge.sort(a);
+        MergeBottomUp.sort(a);
 
         for (int i = 0; i < a.length; i++){
             System.out.println(a[i]);
