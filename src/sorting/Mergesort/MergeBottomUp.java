@@ -1,4 +1,4 @@
-package sorting;
+package sorting.Mergesort;
 
 public class MergeBottomUp {
     private static Comparable[] aux;
