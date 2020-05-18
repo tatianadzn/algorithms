@@ -1,6 +1,7 @@
 import queues.priorityQueues.MaxPriorityQueueBinaryHeapImplementation;
 import queues.priorityQueues.MinPriorityQueueLinkedListImplementation;
 import sorting.Heapsort;
+import sorting.Insertion;
 
 public class Main {
     //testing client
@@ -40,7 +41,8 @@ public class Main {
         a[6] = 3;
         a[7] = 8;
 
-        Heapsort.sort(a);
+        Insertion.sort(a);
+//        Heapsort.sort(a);
 
         Heapsort.show(a);
 //
