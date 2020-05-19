@@ -1,3 +1,4 @@
+import hashTabels.HashTableWithChaining;
 import queues.priorityQueues.MaxPriorityQueueBinaryHeapImplementation;
 import queues.priorityQueues.MinPriorityQueueLinkedListImplementation;
 import sorting.Heapsort;
@@ -31,20 +32,20 @@ public class Main {
 //        System.out.println(q.dequeue());
 //        System.out.println(q.isEmpty());
 
-        Integer[] a = new Integer[8];
-        a[0] = 1;
-        a[1] = 6;
-        a[2] = 3;
-        a[3] = 0;
-        a[4] = 2;
-        a[5] = 2;
-        a[6] = 3;
-        a[7] = 8;
-
-        Insertion.sort(a);
+//        Integer[] a = new Integer[8];
+//        a[0] = 1;
+//        a[1] = 6;
+//        a[2] = 3;
+//        a[3] = 0;
+//        a[4] = 2;
+//        a[5] = 2;
+//        a[6] = 3;
+//        a[7] = 8;
+//
+//        Insertion.sort(a);
 //        Heapsort.sort(a);
 
-        Heapsort.show(a);
+//        Heapsort.show(a);
 //
 //        QuicksortWithDijkstra3WayPartitioning.sort(a);
 //
@@ -73,6 +74,20 @@ public class Main {
 //        System.out.println(pq.delMax());
 //        System.out.println(pq.delMax());
 //        System.out.println(pq.delMax());
+
+        HashTableWithChaining<String, Integer> st = new HashTableWithChaining<>(4);
+        st.insert("Aurora", 6);
+        st.insert("Belle", 1);
+        st.insert("Jasmin", 2);
+        st.insert("Moana", 3);
+        st.insert("Ari", 7);
+        st.insert("Elsa", 9);
+        st.insert("Anna", 11);
+        st.insert("Olaf", 0);
+        System.out.println(st.search("Olaf"));
+        System.out.println(st.search("Jasmin"));
+        System.out.println(st.search("Elsa"));
+
 
 
     }
