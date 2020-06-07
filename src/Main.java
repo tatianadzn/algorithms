@@ -1,17 +1,22 @@
+import graphs.Graph;
 
 public class Main {
     //testing client
     public static void main(String[] args){
 
-        BinarySearchTree bst = new BinarySearchTree();
-        bst.Insert(6);
-        bst.Insert(7);
-        bst.Insert(1);
-        bst.Insert(5);
-        bst.Insert(10);
-        bst.Insert(2);
-        bst.Insert(6);
-        bst.Insert(4);
-        System.out.println(bst.Predecessor(10));
+        int[][] adj = new int[3][2];
+        adj[0][0] = 0;
+        adj[0][1] = 2;
+        adj[1][0] = 0;
+        adj[1][1] = 1;
+        adj[2][0] = 1;
+        adj[2][1] = 3;
+
+        Graph g = new Graph(4, 3, adj);
+        for (int w : g.adj(1)){
+            System.out.println(w);
+        }
+        g.show();
+        System.out.println(g.E);
     }
 }
