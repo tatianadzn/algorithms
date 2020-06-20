@@ -1,5 +1,7 @@
 import graphs.BreadthFirstPaths;
 import graphs.ConnectedComponents;
+import graphs.EdgeWeightedGraph.Edge;
+import graphs.EdgeWeightedGraph.EdgeWeightedGraph;
 import graphs.Graph;
 
 public class Main {
@@ -12,16 +14,17 @@ public class Main {
         adj[1][0] = 4;
         adj[1][1] = 1;
 
-        Graph g = new Graph(5, 2, adj);
-        for (int w : g.adj(3)){
-            System.out.println(w);
+        EdgeWeightedGraph edg = new EdgeWeightedGraph(7);
+        Edge e = new Edge(6, 0, 0.58);
+        Edge e_ = new Edge(0, 2, 0.26);
+
+        edg.addEdge(e);
+        edg.addEdge(e_);
+
+        int vertex = 1;
+
+        for (Edge edge: edg.adj(vertex)){
+            System.out.println(edge.other(vertex));
         }
-//        DepthFirstPaths dfp = new DepthFirstPaths(g, 1);
-//        System.out.println(dfp.isConnected(2));
-//        BreadthFirstPaths bfp = new BreadthFirstPaths(g, 0);
-//        System.out.println(bfp.shortestPath(1));
-        ConnectedComponents cp = new ConnectedComponents(g);
-        System.out.println(cp.isSameComponent(0, 4));
-        System.out.println(cp.numberOfComponents());
     }
 }
