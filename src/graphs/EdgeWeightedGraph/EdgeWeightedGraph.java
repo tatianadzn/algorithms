@@ -22,20 +22,21 @@ public class EdgeWeightedGraph {
     }
 
     public void addEdge(Edge e){
-        Node node = new Node();
-        node.edge = e;
-        node.next  = null;
+
         int v = e.either();
         int w = e.other(v);
 
-        insertIntoAdj(node, v);
-        insertIntoAdj(node, w);
+        insertIntoAdj(e, v);
+        insertIntoAdj(e, w);
 
     }
 
-    private void insertIntoAdj(Node node, int v){
+    private void insertIntoAdj(Edge e, int v){
+        Node node = new Node();
+        node.edge = e;
+        node.next  = null;
         Node previous = adj[v];
-        for (int i = 0; i < adj[v].length; i++){
+        while (previous.next != null){
             previous  =  previous.next;
         }
         previous.next = node;
@@ -47,10 +48,16 @@ public class EdgeWeightedGraph {
         Edge[] edges = new Edge[len];
         Node current = adj[v];
 
-        for (int i = 0;  i < len; i++){
+        int i = 0;
+        while (current.next != null){
             edges[i] = current.next.edge;
             current = current.next;
+            i++;
         }
         return edges;
+    }
+
+    public int V(){
+        return V;
     }
 }
